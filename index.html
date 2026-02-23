@@ -71,7 +71,9 @@
     }
 
     /* ── antd overrides for visual fidelity ────────── */
-    .ant-btn { font-family: var(--font); border-radius: var(--radius-md); font-weight: 500; }
+    .ant-btn { font-family: var(--font); border-radius: var(--radius-md); font-weight: 500; display: inline-flex !important; align-items: center !important; justify-content: center !important; }
+    .ant-btn > .anticon + span, .ant-btn > span + .anticon { margin-inline-start: 8px; vertical-align: middle; }
+    .ant-btn > span { line-height: 1; vertical-align: middle; }
     .ant-table { font-family: var(--font); }
     .ant-table-thead > tr > th { font-size: 10px !important; font-weight: 600 !important; color: var(--gray-500) !important; text-transform: uppercase; letter-spacing: .5px; background: var(--gray-50) !important; padding: 10px 16px !important; }
     .ant-table-tbody > tr > td { font-size: var(--text-sm); padding: 10px 16px !important; }
