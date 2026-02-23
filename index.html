@@ -1208,7 +1208,7 @@ function App() {
 
             {pickerState === 'closed' && (
               <div style={{ display: 'flex', justifyContent: 'center', marginTop: (sources.length > 0 || files.length > 0) ? 0 : 'var(--sp-3)' }}>
-                <Button type="dashed" size="large" icon={<PlusOutlined />} onClick={() => setPickerState('categories')} style={{ maxWidth: 280, width: '100%', height: 56 }}>Add Source</Button>
+                <Button type="dashed" size="large" icon={<PlusOutlined />} onClick={() => setPickerState('categories')} style={{ maxWidth: 280, width: '100%', height: 48, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, fontSize: 15 }}>Add Source</Button>
               </div>
             )}
 
