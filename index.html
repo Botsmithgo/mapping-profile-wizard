@@ -498,10 +498,8 @@
       margin-top: var(--sp-4);
     }
 
-    .empty-hero { text-align: center; padding: var(--sp-16) var(--sp-6); }
-    .empty-hero-icon { width: 60px; height: 60px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--sp-4); }
-    .empty-hero-title { font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--sp-1); }
-    .empty-hero-sub { font-size: var(--text-base); color: var(--gray-500); }
+    .empty-hero { text-align: center; padding: var(--sp-6) var(--sp-6) 0; }
+    .empty-hero-sub { font-size: var(--text-sm); color: var(--gray-400); }
 
     /* ── Graph (Step 4) - unchanged ──────────────── */
     .graph-fullpage { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--gray-100); z-index: 200; display: flex; flex-direction: column; }
@@ -1173,7 +1171,7 @@ function App() {
             <div className="section-sub">Add data sources for this mapping profile. Files, databases, warehouses, APIs, and more.</div>
 
             {sources.length === 0 && files.length === 0 && pickerState === 'closed' && (
-              <div className="empty-hero"><div className="empty-hero-icon"><LayersIc /></div><div className="empty-hero-title">No sources added yet</div><div className="empty-hero-sub">Click the button below to connect your first data source.</div></div>
+              <div className="empty-hero"><div className="empty-hero-sub">Click the button below to add a source.</div></div>
             )}
 
             {(sources.length > 0 || (files.length > 0 && pickerState !== 'files')) && (
@@ -1209,7 +1207,7 @@ function App() {
             )}
 
             {pickerState === 'closed' && (
-              <div style={{ display: 'flex', justifyContent: 'center', marginTop: (sources.length > 0 || files.length > 0) ? 0 : 'var(--sp-6)' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: (sources.length > 0 || files.length > 0) ? 0 : 'var(--sp-3)' }}>
                 <Button type="dashed" size="large" icon={<PlusOutlined />} onClick={() => setPickerState('categories')} style={{ maxWidth: 280, width: '100%', height: 56 }}>Add Source</Button>
               </div>
             )}
