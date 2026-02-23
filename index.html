@@ -72,9 +72,6 @@
 
     /* ── antd overrides for visual fidelity ────────── */
     .ant-btn { font-family: var(--font); border-radius: var(--radius-md); font-weight: 500; }
-    .ant-btn-dashed.ant-btn-lg { display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 8px !important; }
-    .ant-btn-dashed.ant-btn-lg .ant-btn-icon { display: inline-flex !important; align-items: center !important; margin-inline-end: 0 !important; line-height: 0 !important; }
-    .ant-btn-dashed.ant-btn-lg > span:not(.ant-btn-icon) { line-height: 1 !important; }
     .ant-table { font-family: var(--font); }
     .ant-table-thead > tr > th { font-size: 10px !important; font-weight: 600 !important; color: var(--gray-500) !important; text-transform: uppercase; letter-spacing: .5px; background: var(--gray-50) !important; padding: 10px 16px !important; }
     .ant-table-tbody > tr > td { font-size: var(--text-sm); padding: 10px 16px !important; }
@@ -1211,7 +1208,7 @@ function App() {
 
             {pickerState === 'closed' && (
               <div style={{ display: 'flex', justifyContent: 'center', marginTop: (sources.length > 0 || files.length > 0) ? 0 : 'var(--sp-3)' }}>
-                <Button type="dashed" size="large" icon={<PlusOutlined />} onClick={() => setPickerState('categories')} style={{ maxWidth: 280, width: '100%', height: 48, fontSize: 15 }}>Add Source</Button>
+                <Button type="dashed" size="large" onClick={() => setPickerState('categories')} style={{ maxWidth: 280, width: '100%' }}>Add Source</Button>
               </div>
             )}
 
